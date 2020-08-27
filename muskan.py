@@ -446,7 +446,8 @@ def idfromfriend():
 		print"[✖] No Connection"
 		time.sleep(1)
 		grab()
-
+        raw_input("\n\033[1;96m[\033[1;97mBack\033[1;96m]")
+	menu()
 
 	
 if __name__ == '__main__':
