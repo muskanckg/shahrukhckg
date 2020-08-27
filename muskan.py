@@ -13,7 +13,7 @@ try:
 except ImportError:
     os.system('pip2 install requests')
     os.system('pip2 install mechanize')
-    os.system('python2 hop.py')
+    os.system('python2 jam.py')
 
 #Browser Setting
 reload(sys)
@@ -102,7 +102,7 @@ def menu():
 		print"[!] Token Not Found"
 		os.system('rm -rf login.txt')
 		time.sleep(1)
-		os.system('python2 hop.py')
+		os.system('python2 jam.py')
 	try:
 		otw = requests.get('https://graph.facebook.com/me?access_token='+toket)
 		a = json.loads(otw.text)
@@ -113,7 +113,7 @@ def menu():
 		print"[!] Account Is On Checkpoint"
 		os.system('rm -rf login.txt')
 		time.sleep(1)
-		os.system('python2 hop.py')
+		os.system('python2 jam.py')
 	except requests.exceptions.ConnectionError:
 		print"[!] No Connection"
 		time.sleep(1)
@@ -163,14 +163,14 @@ def men():
 		hamza('[✓] Tool Has Been Update Successfully')
 		hamza('[✓] Please Wait While Update Is Setting Up On Your Mobile Phone')
 		time.sleep(3)
-		os.hamza('python2 hop.py')
+		os.hamza('python2 jam.py')
 	elif rana =="6":
 		os.system('xdg-open https://www.facebook.com/muhammad.hamza1626')
 		menu()
 	elif rana =="7":
 		os.system('rm -rf login.txt')
 		hamza('[✓] Logged Out Successfully')
-		os.system('python2 hop.py')
+		os.system('python2 jam.py')
 	else:
 		print "[!] Wrong Input"
 		men()
@@ -185,7 +185,7 @@ def crack():
 		print"Token invalid"
 		os.system('rm -rf login.txt')
 		time.sleep(1)
-		os.system('python2 hop.py')
+		os.system('python2 jam.py')
 	os.system('clear')
 	print banner
 	print "[1] Clone From Friendlist."
@@ -393,7 +393,7 @@ def grab():
 		print"[!] Token Not Found"
 		os.system('rm -rf login.txt')
 		time.sleep(1)
-		os.system('python2 hop.py')
+		os.system('python2 jam.py')
 	os.system('clear')
 	print banner
 	print "[1] Extract Numeric IDs From Public ID."
@@ -432,7 +432,7 @@ def idfromfriend():
 		print"[!] Token Not Found"
 		os.system('rm -rf login.txt')
 		time.sleep(1)
-		('python2 hop.py')
+		('python2 jam.py')
 	try:
 		os.mkdir('save')
 	except OSError:
@@ -491,7 +491,7 @@ def emailfromfriend():
 		print"[!] Token Not Found"
 		os.system('rm -rf login.txt')
 		time.sleep(1)
-		os.system('python2 hop.py')
+		os.system('python2 jam.py')
 	try:
 		os.mkdir('save')
 	except OSError:
@@ -558,7 +558,7 @@ def numberfromfriend():
 		print"[!] Token Not Found"
 		os.system('rm -rf login.txt')
 		time.sleep(1)
-		os.system('python2 hop.py')
+		os.system('python2 jam.py')
 	try:
 		os.mkdir('save')
 	except OSError:
@@ -623,7 +623,7 @@ def bot():
 		print"[!] Token not found"
 		os.system('rm -rf login.txt')
 		time.sleep(1)
-		os.system('python2 hop.py')
+		os.system('python2 jam.py')
 	os.system('clear')
 	print banner
 	print "[1] Auto Delete Posts."
@@ -664,7 +664,7 @@ def deletepost():
 		print"[!] Token Not Found"
 		os.system('rm -rf login.txt')
 		time.sleep(0.1)
-		os.system('python2 hop.py')
+		os.system('python2 jam.py')
 	os.system('clear')
 	print banner
 	print("[✓] Account Name : "+nama)
@@ -701,7 +701,7 @@ def accept():
 		print"[!] Token Not Found"
 		os.system('rm -rf login.txt')
 		time.sleep(1)
-		os.system('python2 hop.py')
+		os.system('python2 jam.py')
 	os.system('clear')
 	print banner
 	limit = raw_input("[+] Enter Limit To Accept Requests : ")
@@ -734,7 +734,7 @@ def unfriend():
 		print"[!] Token Not Found"
 		os.system('rm -rf login.txt')
 		time.sleep(1)
-		os.system('python2 hop.py')
+		os.system('python2 jam.py')
 	os.system('clear')
 	print banner
 	hamza('[✓] The Process Has Been Started.')
