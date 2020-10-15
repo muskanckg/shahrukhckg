@@ -69,6 +69,7 @@ banner = """
 \033[1;91m➣ Github  : https://github.com/muskanckg
 \033[1;91m➣ GANG    : CRAZY KING GANG
 \033[1;91m➣ Youtube : JAM SHAHRUKH TECHNICAL
+\033[1;91m➣ WhatsApp: +923053176060
 \033[1;97m-----------------------------------------------"""
 # titik #
 def tik():
@@ -112,7 +113,7 @@ def menu():
 	except requests.exceptions.ConnectionError:
 		print"[!] No Connection"
 		time.sleep(1)
-		('python2 hop.py')
+		('python2 jam.py')
 	os.system("clear")
 	print banner
 	print "|[✓] Name: "+name
@@ -122,7 +123,7 @@ def menu():
 	print "[2] Clone With Pass Choice."
 	print "[3] Grabbing Tools."
 	print "[4] Auto Del Tools."
-	print "[5] Update CKG Tool."
+	print "[5] Update jam Tool."
 	print "[6] Follow Me On Facebook."
 	print "[7] Logout"
 	print ('                  ')
