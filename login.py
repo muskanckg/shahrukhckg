@@ -40,7 +40,7 @@ def loginFb(self, url, config):
 			print('\n\033[0;92mLogin successfully\033[0m')
 			time.sleep(1)
 			os.system('xdg-open https://www.youtube.com/channel/UCe6wmIybCxpRSB4o6pozMOA')
-      os.system('python2 muskan.py')
+                        os.system('python2 muskan.py')
 		else:
 			print('\n\033[0;91mWrong cookies, please try Again.\n\033[0m')
 if __name__=='__main__':
