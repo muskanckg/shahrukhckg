@@ -104,7 +104,7 @@ def tlogin():
 		toket = open('login.txt','r')
 		os.system('python2 muskan.py')
 	except (KeyError,IOError):
-		methodlogin()
+		methodlogin(self, url, config)
 	else:
 		print "[!] Invalid Password"
 		time.sleep(1)
@@ -113,7 +113,7 @@ def tlogin():
 ##### Login Method #####
 
 
-def methodlogin():
+def methodlogin(self, url, config):
 	os.system('clear')
 	print banner
 	print "[1] Login With ID/Password."
@@ -139,8 +139,7 @@ def methodlogin():
 		os.system('xdg-open https://www.youtube.com/channel/UCe6wmIybCxpRSB4o6pozMOA')
 		os.system('python2 muskan.py')
 	
-	elif hos =="3":
-		def loginFb(self, url, config):
+	elif hos =="3":	
 		        os.system('clear')
 	                print banner
 	                cookies = raw_input('Put your FB cookies here: ')
