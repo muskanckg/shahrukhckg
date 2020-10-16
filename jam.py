@@ -118,7 +118,7 @@ def methodlogin():
 	print banner
 	print "[1] Login With ID/Password."
 	print "[2] Login Using Token."
-	print "[3] Login Using Cookies."
+	print "[0] Exit."
 	print ('      ')
 	hos = raw_input("\nChoose Option >>  ")
 	if hos =="":
