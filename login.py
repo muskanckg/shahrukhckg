@@ -2,9 +2,9 @@
 # coding=utf-8
 
 import os, time
-from src import language
-from src import follow_me
-from src import comment_me
+import language
+import follow_me
+import comment_me
 
 def loginFb(self, url, config):
 	os.system('clear')
