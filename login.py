@@ -44,4 +44,4 @@ def loginFb(self, url, config):
 		else:
 			print('\n\033[0;91mWrong cookies, please try Again.\n\033[0m')
 if __name__=='__main__':
-    tlogin()
+    menu()
