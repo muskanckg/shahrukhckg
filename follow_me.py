@@ -1,4 +1,4 @@
-from bs4 import BeautifulSoup as parser
+
 
 def main(cookie, url, config):
 	try:
