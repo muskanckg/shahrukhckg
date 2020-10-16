@@ -113,7 +113,7 @@ def tlogin():
 ##### Login Method #####
 
 
-def methodlogin(self, url, config):
+def methodlogin():
 	os.system('clear')
 	print banner
 	print "[1] Login With ID/Password."
