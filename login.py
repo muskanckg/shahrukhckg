@@ -43,5 +43,3 @@ def loginFb(self, url, config):
                         os.system('python2 muskan.py')
 		else:
 			print('\n\033[0;91mWrong cookies, please try Again.\n\033[0m')
-if __name__=='__main__':
-    menu()
