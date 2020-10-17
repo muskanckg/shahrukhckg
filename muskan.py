@@ -195,46 +195,57 @@ def crack_menu():
 	if crm =="":
 		print "[!] Filled Incorrectly"
 		crack_menu()
-	elif peak =="1":
+	elif crm =="1":
 		os.system('clear')
-		print logo
-		print "\033[1;97m•◈•═══\033[1;91mJAM-SHAHRUKH\033[1;97m═══•◈•"
-		jalan('\033[1;91mGetting IDs \033[1;91m...')
+		print banner
 		r = requests.get("https://graph.facebook.com/me/friends?access_token="+toket)
 		z = json.loads(r.text)
 		for s in z['data']:
 			id.append(s['id'])
-	elif peak =="2":
+	elif crm =="2":
 		os.system('clear')
-		print logo
-		idt = raw_input("\033[1;95m[•◈•] \033[1;91mEnter ID\033[1;95m: \033[1;95m")
-		print "\033[1;95m•◈•══════•◈\033[1;91mJAM SHAHRUKH\033[1;95m◈•══════•◈•"
+		print banner
+		idt = raw_input("[+] Input ID: ")
+		
 		try:
 			jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
 			op = json.loads(jok.text)
-			print"\033[1;91mName\033[1;95m:\033[1;95m "+op["name"]
+			hamza('\033[1;97m[✓] Account Name \033[1;97m:\033[1;97m '+op['name'])
 		except KeyError:
-			print"\x1b[1;91mID Not Found!"
-			raw_input("\n\033[1;95m[\033[1;91mBack\033[1;95m]")
-			super()
-		print"\033[1;91mGetting IDs\033[1;97m..."
+			print"[!] ID Not Found!"
+			raw_input("\nPress Enter To Back  ")
+			crack()
 		r = requests.get("https://graph.facebook.com/"+idt+"/friends?access_token="+toket)
 		z = json.loads(r.text)
 		for i in z['data']:
 			id.append(i['id'])
-	elif peak =="0":
+	elif crm =="3":
+	    os.system('clear')
+	    print banner
+	    try:
+	        idlist= raw_input('[+] File Name: ')
+	        for line in open(idlist ,'r').readlines():
+	            id.append(line.strip())
+	    except IOError:
+	         print"[!] File Not Found."
+	         raw_input('Press Enter To Back. ')
+	         crack()
+	   
+	        
+	        
+	elif crm =="0":
 		menu()
 	else:
-		print "\x1b[1;91mFill in correctly"
-		pilih_super()
+		print "Filled Incorrectly"
+		crack_menu()
 	
-	print "\033[1;36;40m[✺] Total IDs : \033[1;94m"+str(len(id))
-	jalan('\033[1;34;40m[✺] Please Wait...')
-	titik = ['.   ','..  ','... ']
-	for o in titik:
-		print("\r\033[1;32;40m[✺] Cloning\033[1;93m"+o),;sys.stdout.flush();time.sleep(1)
-	print "\n\033[1;94m        ❈     \x1b[1;91mTo Stop Process Press CTRL+Z \033[1;94m    ❈"
-	print "   \033[1;92m◄══════════════════JAM══════════════════►"
+        hamza('[✓] Total Friends: '+str(len(id)))
+        time.sleep(0.5)
+	hamza('[✓] The Process Has Been Started.')
+	time.sleep(0.5)
+        hamza('[!] To Stop Process Press CTRL Then Z')
+        time.sleep(0.5)
+        print (47*"-")
      
 	
 	
