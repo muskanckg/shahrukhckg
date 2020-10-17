@@ -184,15 +184,17 @@ def choice1_menu():
 			jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
 			op = json.loads(jok.text)
 			hamza("[✓] Account  Name: "+op["name"])
+			
 			time.sleep(0.5)
 		except KeyError:
 			print("[!] ID Not Found!")
 			raw_input("\nPress Enter To Back ")
 			choice1()
+		print"\033[1;35;40m[✺] Getting IDs..."
 		r = requests.get("https://graph.facebook.com/"+idt+"/friends?access_token="+toket)
 		z = json.loads(r.text)
-		for i in z["data"]:
-			id.append(i["id"])
+		for i in z['data']:
+			id.append(i['id'])
 	elif c1m =="3":
 		os.system("clear")
 		print (banner)
@@ -372,10 +374,11 @@ def choice2_menu():
 			print("[!] ID Not Found!")
 			raw_input("\nPress Enter To Back ")
 			choice2()
+		print"\033[1;35;40m[✺] Getting IDs..."
 		r = requests.get("https://graph.facebook.com/"+idt+"/friends?access_token="+toket)
 		z = json.loads(r.text)
-		for i in z["data"]:
-			id.append(i["id"])
+		for i in z['data']:
+			id.append(i['id'])
 	elif c2m =="3":
 		os.system("clear")
 		print (banner)
