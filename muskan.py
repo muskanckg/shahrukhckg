@@ -198,60 +198,43 @@ def crack_menu():
 	elif peak =="1":
 		os.system('clear')
 		print logo
-		print 42*"\033[1;96m="
-		jalan('\033[1;93m[✺] Getting IDs \033[1;97m...')
+		print "\033[1;97m•◈•═══\033[1;91mJAM-SHAHRUKH\033[1;97m═══•◈•"
+		jalan('\033[1;91mGetting IDs \033[1;91m...')
 		r = requests.get("https://graph.facebook.com/me/friends?access_token="+toket)
 		z = json.loads(r.text)
 		for s in z['data']:
 			id.append(s['id'])
-			
 	elif peak =="2":
 		os.system('clear')
 		print logo
-		print 42*"\033[1;96m="
-		idt = raw_input("\033[1;96m \033[1;93mEnter ID \033[1;91m: \033[1;97m")
+		idt = raw_input("\033[1;95m[•◈•] \033[1;91mEnter ID\033[1;95m: \033[1;95m")
+		print "\033[1;95m•◈•══════•◈\033[1;91mJAM SHAHRUKH\033[1;95m◈•══════•◈•"
 		try:
 			jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
 			op = json.loads(jok.text)
-			print"\033[1;96m[\033[1;97m \033[1;96m] \033[1;93mName\033[1;91m :\033[1;97m "+op["name"]
+			print"\033[1;91mName\033[1;95m:\033[1;95m "+op["name"]
 		except KeyError:
-			print"\033[1;96m \x1b[1;91mID Not Found!"
-			raw_input("\n\033[1;96m[\033[1;97mBack\033[1;96m]")
+			print"\x1b[1;91mID Not Found!"
+			raw_input("\n\033[1;95m[\033[1;91mBack\033[1;95m]")
 			super()
-		print"\033[1;35;40m[✺] Getting IDs..."
+		print"\033[1;91mGetting IDs\033[1;97m..."
 		r = requests.get("https://graph.facebook.com/"+idt+"/friends?access_token="+toket)
 		z = json.loads(r.text)
 		for i in z['data']:
 			id.append(i['id'])
-			
-	elif peak =="3":
-		os.system('clear')
-		print logo
-		print 42*"\033[1;96m="
-		try:
-			idlist = raw_input('\x1b[1;96m \x1b[1;93mEnter File Path  \x1b[1;91m: \x1b[1;97m')
-			for line in open(idlist,'r').readlines():
-				id.append(line.strip())
-		except IOError:
-			print '\x1b[1;96m \x1b[1;91mFile Not Found'
-			raw_input('\n\x1b[1;96m[ \x1b[1;97mBack \x1b[1;96m]')
-			super()
-	   
-	        
-	        
-	elif crm =="0":
+	elif peak =="0":
 		menu()
 	else:
-		print "Filled Incorrectly"
-		crack_menu()
+		print "\x1b[1;91mFill in correctly"
+		pilih_super()
 	
-        hamza('[✓] Total Friends: '+str(len(id)))
-        time.sleep(0.5)
-	hamza('[✓] The Process Has Been Started.')
-	time.sleep(0.5)
-        hamza('[!] To Stop Process Press CTRL Then Z')
-        time.sleep(0.5)
-        print (47*"-")
+	print "\033[1;36;40m[✺] Total IDs : \033[1;94m"+str(len(id))
+	jalan('\033[1;34;40m[✺] Please Wait...')
+	titik = ['.   ','..  ','... ']
+	for o in titik:
+		print("\r\033[1;32;40m[✺] Cloning\033[1;93m"+o),;sys.stdout.flush();time.sleep(1)
+	print "\n\033[1;94m        ❈     \x1b[1;91mTo Stop Process Press CTRL+Z \033[1;94m    ❈"
+	print "   \033[1;92m◄══════════════════JAM══════════════════►"
      
 	
 	
